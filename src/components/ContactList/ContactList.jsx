@@ -8,7 +8,7 @@ const ContactList = ({ contacts, filter, onDeleteContact }) => {
     name.toLowerCase().includes(filter.toLowerCase())
   );
   return (
-  
+
     <ul>
       {filteredContacts.map(({id, name, phone}) => (
         <ContactListItem
@@ -24,12 +24,11 @@ const ContactList = ({ contacts, filter, onDeleteContact }) => {
 )}
 
 const ContactListItem = ({ id, name, phone, deleteContact}) => (
-  
+
     <ContactItem>
       <ContactName>{name}</ContactName>
       <ContactNumber>{phone}</ContactNumber>
       <DeleteBtn onClick={() => deleteContact(id)}>Delete</DeleteBtn>
     </ContactItem>
-  
 )
  export default ContactList
